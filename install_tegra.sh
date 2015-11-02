@@ -244,6 +244,10 @@ make_rcconf()
 
 make_resolvconf()
 {
+  cat > ${root_mtpt}/etc/resolv.conf <<EOF
+search NetBSD.org
+nameserver 10.187.2.6
+EOF
 }
 
 make_boottxt()
